@@ -1,0 +1,15 @@
+using './edgeDeploy.bicep'
+
+param dnsLabelPrefix = 'xxxxxxxx-xxx-eaus'
+param adminUsername = 'xxxxx'
+param adminPasswordOrKey = 'xxxxx'
+param authenticationType = 'password'
+//param vmSize = 'Standard_B1ms'
+param vmSize = 'Standard_DS1_v2'
+param osDiskType = 'Standard_LRS'
+param existingVnetName = 'vnet-xxxxxx'
+param existingSubnetName ='subnet-xxxxxxx'
+param ubuntuOSVersion = '20_04-lts'
+param deviceConnectionString = '$(az iot hub device-identity connection-string show --device-id xxxxxxx --hub-name xxxxx -o tsv)'
+param allowSsh = true
+
